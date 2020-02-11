@@ -8,6 +8,7 @@ body{
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     color: #b3b3b3;
+    letter-spacing: 1.2px;
 
 
 }
@@ -15,6 +16,10 @@ body{
 h3{
     color: #fff;
     font-weight: 600;
+}
+
+h5{
+    text-transform: uppercase;
 }
 
 /* SEZ A - HEADER
@@ -99,6 +104,7 @@ aside{
 .aside__menu-fixed--home{
     border-left: 2px solid #1AD860;
 
+
 }
 .aside__menu-fixed--home i{
     color: #fff;
@@ -142,10 +148,53 @@ aside{
     .aside__menu-fixed--logo-large img{
         width:100%;
         padding: 60px 40px;
+    }
 
+    .aside__menu-fixed--cerca, .aside__menu-fixed--libreria{
+        display: none;
+    }
 
+    .aside__menu-fixed--home span{
+        display: flex;
+    }
+
+    .aside__menu-fixed--naviga, .aside__menu-fixed--radio, .aside__menu-fixed--home, .aside__menu-fixed--naviga > a, .aside__menu-fixed--radio > a, .aside__menu-fixed--home > a{
+        display: flex;
+        align-items: center;
 
     }
+
+
+
+    .aside__menu-fixed a{
+        text-align: left;
+        padding-left: 20px;
+        text-decoration: none;
+        color: #b3b3b3;
+
+    }
+
+    .aside__menu-fixed--home a{
+        color: #fff;
+        padding-left: 18px;
+
+    }
+    .aside__menu-fixed i{
+        padding-right: 20px;
+
+    }
+
+    .aside__menu-fixed--home i{
+        padding-right: 18px;
+    }
+    .aside__menu-fixed--radio i{
+        padding-right: 16px;
+    }
+
+    .aside__menu-fixed a:hover{
+        background-color: #282828;
+    }
+
 }
 
 
