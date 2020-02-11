@@ -6,4 +6,227 @@
 
 body{
     font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #b3b3b3;
+
+
 }
+
+h3{
+    color: #fff;
+    font-weight: 600;
+}
+
+/* SEZ A - HEADER
+================== */
+
+header{
+    display: flex;
+    position: fixed;
+    top:0;
+    right:0;
+
+    background-color: #18181890;
+    width:90vw;
+    height: 100px;
+    z-index:50;
+}
+
+
+/* SEZ B - ASIDE
+================= */
+
+aside{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top:0;
+    left:0;
+
+    background-color: #121212;
+    width:10vw;
+    height:calc(100vh - 90px);
+}
+
+.aside__menu-fixed--logo-large, .aside__menu-fixed--naviga, .aside__menu-fixed--radio, .aside__menu-fixed--home span{
+    display: none;
+}
+
+.aside__menu-fixed{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none:
+}
+.aside__menu-fixed ul{
+    width: 100%;
+}
+
+.aside__menu-fixed li{
+
+    list-style-type: none;
+    width:100%;
+    text-align: center;
+
+}
+.aside__menu-fixed i{
+    font-size: 22px;
+    color: #b3b3b3;
+}
+.aside__menu-fixed a{
+    display: inline-block;
+    width:100%;
+    padding: 10px 0;
+
+}
+
+.aside__menu-fixed--logo-small{
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+
+}
+.aside__menu-fixed--logo-small i{
+    color: #fff;
+    font-size: 26px;
+
+
+}
+
+
+.aside__menu-fixed--home{
+    border-left: 2px solid #1AD860;
+
+}
+.aside__menu-fixed--home i{
+    color: #fff;
+
+}
+/* aside menu scroll
+=============*/
+.aside__menu-scroll{
+    display: none;
+    overflow-y: auto;
+}
+
+/* current play cover
+=============*/
+
+.aside__current-play-cover{
+    display: none;
+}
+
+/* MEDIA QUERIES - ASIDE
+======================== */
+
+@media screen and (min-width:470px) { /*logo small*/
+    .aside__menu-fixed--logo-small i{
+        font-size: 34px;
+    }
+
+}
+@media screen and (min-width: 768px){
+    .aside__menu-fixed--logo-small{
+        display: none;
+    }
+    .aside__menu-fixed--logo-large{
+        display: block;
+        height: 100px;
+        display: flex;
+        align-items: center;
+
+
+    }
+    .aside__menu-fixed--logo-large img{
+        width:100%;
+        padding: 60px 40px;
+
+
+
+    }
+}
+
+
+
+
+
+/* SEZ C - MAIN
+================ */
+main{
+    display: flex;
+    flex-direction: column;
+
+    /* background-color: #181818; */
+    background-color: darkblue;
+    width:90vw;
+    height: calc(100vh - 90px);
+    position:absolute;
+    top:0;
+    right:0;
+    overflow-y: auto;
+}
+
+
+/* SEZ D - CONTROL BAR
+======================= */
+
+#control-bar{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-color: #282828;
+    width:100vw;
+    height: 90px;
+}
+
+
+
+
+
+
+/* MEDIA QUERIES - GENERALI
+=========================== */
+
+/* versione small (tablet) */
+@media screen and (min-width: 768px){
+    aside{
+        width: 25vw;
+    }
+    header{
+        width: 75vw;
+    }
+    main{
+        width: 75vw;
+    }
+}
+
+/* versione medium (desktop) */
+@media screen and (min-width: 992px){
+    aside{
+        max-width: 250px;
+    }
+    header{
+        width: calc(100vw - 250px);
+    }
+    main{
+        width: calc(100vw - 250px);
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* stassu */
