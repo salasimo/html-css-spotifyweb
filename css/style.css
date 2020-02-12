@@ -42,7 +42,7 @@ header {
     position: fixed;
     top: 0;
     right: 0;
-    background-color: #18181890;
+    background-color: rgba(18,18,18,0.95);
     width: calc(100vw - 60px);
     height: 70px;
     z-index: 50;
@@ -369,12 +369,146 @@ main {
     /* background-color: #181818; */
     background-color: #0e2047;
     width: calc(100vw - 60px);
-    height: calc(100vh - 80px);
+    height: calc(100vh - 70px);
     position: absolute;
-    top: 0;
     right: 0;
+    top: 0;
     overflow-y: auto;
+    padding-top: 70px;
 
+}
+
+nav.main__nav{
+    width:100%;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    flex-wrap: wrap;
+
+
+
+}
+
+.main__nav ul{
+
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    justify-content: center;
+    align-items: center;
+
+
+
+
+}
+
+.main__nav ul li a{
+    display: inline-block;
+    color: #b3b3b3;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 10px 15px;
+}
+
+.main__nav ul li a:hover{
+    color: #fff;
+}
+
+/*media queries - Main*/
+/* xss*/
+@media screen and (max-width:450px){
+    .main__nav ul{
+        flex-basis: 95%;
+    }
+    .main__nav ul li a{
+        font-size: 0.9em;
+        margin: 5px 10px
+    }
+}
+@media screen and (min-width:670px) {
+    nav.main__nav ul{
+        flex-basis: 80%;
+
+    }
+}
+
+
+@media screen and (min-width:768px) {
+    nav.main__nav ul{
+        flex-basis: 90%;
+
+    }
+}
+
+@media screen and (min-width:950px) {
+    nav.main__nav ul{
+        flex-basis: 60%;
+        max-width: 1460px;
+    }
+}
+
+@media screen and (min-width:1100px) {
+    nav.main__nav ul{
+        flex-basis: 100%;
+        max-width: 1460px;
+    }
+}
+
+/*sections*/
+.section-content{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: flex-start;
+
+}
+.main__section{
+
+    padding:20px 10px;
+
+
+}
+
+.main__section h2{
+    margin-bottom: 10px;
+}
+/*cards*/
+.card__content{
+    padding:15px;
+    border-radius:20px;
+    min-height: 230px;
+
+    transition: 0.2s ease;
+}
+
+.card{
+    width: 140px;
+
+
+    border-radius:20px;
+    margin-right: 10px;
+}
+
+.card__content:hover{
+    background-color: rgba(0,0,0,0.2);
+    transform:scale(1.05);
+}
+
+
+
+.card img{
+    width:100%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.card h3{
+    font-size: 14px;
+}
+
+.card span{
+    font-size: 12px;
 }
 
 /* SEZ D - CONTROL BAR
@@ -480,9 +614,6 @@ width: 180%;
 
 
 
-
-
-
 }
 .mini-cover{
     width:60px;
@@ -495,7 +626,6 @@ width: 180%;
     margin-left: 10px;
 
 }
-
 
 
 .info-bar-mobile__cover{
@@ -513,6 +643,7 @@ width: 180%;
     justify-content: space-evenly;
     position: absolute;
     right:20px;
+    font-size: 18px;
 
 }
 .info-bar-mobile__love i{
@@ -626,6 +757,7 @@ width: 180%;
     main {
         width: calc(100vw - 230px);
         height: calc(100vh - 90px);
+        padding-top: 100px;
     }
 }
 
