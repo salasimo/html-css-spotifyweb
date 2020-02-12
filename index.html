@@ -11,16 +11,25 @@
     <body>
         <div class="page-container">
             <!-- SEZ A - HEADER fisso in alto -->
-            <header>
-                <div class="header__navigation">
-
+            <header class="flex row-flex-vertical-centered">
+                <div class="header-wrapper-left flex row-flex-vertical-centered">
+                    <div class="header__navigation">
+                        <i class="fas fa-chevron-left"></i>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <div class="header__search-bar">
+                        <i class="header__search-bar__search-icon fas fa-search"></i>
+                        <input type="text" placeholder="Cerca">
+                    </div>
                 </div>
-                <div class="header__search-bar">
 
-                </div>
                 <div class="header__profile">
+                <img class="header__profile__user-avatar" src="img/Avatar-nero-mini.jpg" alt="User profile">
 
+                <span class="header__profile__username">Simone</span>
+                <i class="fas fa-chevron-down"></i>
                 </div>
+
 
             </header>
             <!-- SEZ B - ASIDE con menu a sinistra -->
@@ -79,9 +88,10 @@
                     <div class="aside__current-play-cover__new-playlist">
                         <a href="#"><i class="fas fa-plus-circle"></i> Nuova Playlist</a>
                     </div>
-                    <div class="aside__current-play-cover__cover">
-                        <img src="https://images-na.ssl-images-amazon.com/images/I/81ODxmPXlnL._AC_SL1500_.jpg" alt="Cover">
+                    <div class="cover-wrapper">
+                        <img class="cover" src="https://images-na.ssl-images-amazon.com/images/I/81ODxmPXlnL._AC_SL1500_.jpg" alt="Cover">
                     </div>
+
                 </div>
 
             </aside>
@@ -102,7 +112,27 @@
             <!-- SEZ D - CONTROL BAR fissa in basso -->
             <div id="control-bar">
                 <div class="control-bar__current-play-info"></div>
-                <div class="control-bar__main-controls"></div>
+                <div class="control-bar__main-controls flex col-flex-vertical-centered">
+                    <div class="control-bar__main-controls__top flex row-flex-vertical-centered">
+                        <i class="ms--shuffle fas fa-random"></i>
+                        <i class="ms--backw fas fa-step-backward"></i>
+                        <i class="ms--play far fa-play-circle"></i>
+                        <i class="ms--forw fas fa-step-forward"></i>
+                        <i class="ms--repeat fas fa-retweet"></i>
+                    </div>
+                    <div class="control-bar__main-controls__bottom flex">
+                        <div class="time">0:47</div>
+                        <div class="time-bar">
+                            <div class="time-dot">
+
+                            </div>
+                        </div>
+                        <div class="total-time">3:50</div>
+
+                    </div>
+
+
+                </div>
                 <div class="control-bar__other-controls"></div>
 
             </div>
