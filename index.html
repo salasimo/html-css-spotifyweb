@@ -11,6 +11,7 @@
     <body>
         <div class="page-container">
             <!-- SEZ A - HEADER fisso in alto -->
+            
             <header class="flex row-flex-vertical-centered">
                 <div class="header-wrapper-left flex row-flex-vertical-centered">
                     <div class="header__navigation">
@@ -110,8 +111,33 @@
 
             </main>
             <!-- SEZ D - CONTROL BAR fissa in basso -->
+            <div class="info-bar-mobile flex row-flex-vertical-centered">
+
+                    <div class="info-bar-mobile__cover">
+                        <img class="mini-cover" src="https://images-na.ssl-images-amazon.com/images/I/81ODxmPXlnL._AC_SL1500_.jpg" alt="Cover">
+                    </div>
+                    <div class="info-bar-mobile-text flex col-flex-vertical-centered">
+                        <div class="info-bar-mobile__title">Per due che come noi</div>
+                        <div class="info-bar-mobile__artist">Brunori Sas</div>
+
+                    </div>
+                    <div class="info-bar-mobile__love flex">
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-volume-down"></i>
+                    </div>
+
+            </div>
             <div id="control-bar">
-                <div class="control-bar__current-play-info"></div>
+                <div class="control-bar__current-play-info flex col-flex-vertical-centered">
+                    <div class="info-text flex col-flex-vertical-centered">
+                        <div class="control-bar__current-play-info__title">Per due che come noi</div>
+                        <div class="control-bar__current-play-info__artist">Brunori Sas</div>
+                    </div>
+                    <div class="info-love">
+                        <i class="ms--favourite far fa-heart"></i>
+                    </div>
+                </div>
+
                 <div class="control-bar__main-controls flex col-flex-vertical-centered">
                     <div class="control-bar__main-controls__top flex row-flex-vertical-centered">
                         <i class="ms--shuffle fas fa-random"></i>
@@ -122,10 +148,9 @@
                     </div>
                     <div class="control-bar__main-controls__bottom flex">
                         <div class="time">0:47</div>
-                        <div class="time-bar">
-                            <div class="time-dot">
 
-                            </div>
+                        <div class="time-bar">
+                            <div class="time-bar-color"></div>
                         </div>
                         <div class="total-time">3:50</div>
 
@@ -133,7 +158,18 @@
 
 
                 </div>
-                <div class="control-bar__other-controls"></div>
+                <div class="control-bar__other-controls flex row-flex-vertical-centered">
+                    <div class="control-bar__other-controls__coda">
+                        <i class="fas fa-list-ol"></i>
+                    </div>
+                    <div class="control-bar__other-controls__devices">
+                        <i class="fab fa-creative-commons-share"></i>
+                    </div>
+                    <div class="control-bar__other-controls__volume">
+                        <i class="fas fa-volume-down"></i>
+                        <div class="volume-bar"></div>
+                    </div>
+                </div>
 
             </div>
         </div>

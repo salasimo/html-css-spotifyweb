@@ -13,14 +13,13 @@
 }
 
 /*=======================*/
-
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     color: #b3b3b3;
     letter-spacing: 1.2px;
-}
 
+}
 h3 {
     color: #fff;
     font-weight: 600;
@@ -48,8 +47,13 @@ header {
     height: 70px;
     z-index: 50;
     padding: 30px;
+    backdrop-filter: blur(2px); /*solo su chrome e safari*/
 }
 
+
+.header__navigation i:hover{
+    color:#fff;
+}
 .header__search-bar{
     display: none;
 }
@@ -57,8 +61,6 @@ header {
     border: none;
     box-shadow: none;
     border-radius: 20px;
-
-
 }
 
 .header__search-bar input[type=text] {
@@ -367,11 +369,12 @@ main {
     /* background-color: #181818; */
     background-color: #0e2047;
     width: calc(100vw - 60px);
-    height: calc(100vh - 90px);
+    height: calc(100vh - 80px);
     position: absolute;
     top: 0;
     right: 0;
     overflow-y: auto;
+
 }
 
 /* SEZ D - CONTROL BAR
@@ -385,9 +388,16 @@ main {
     right: 0;
     background-color: #282828;
     width: 100vw;
-    height: 90px;
+    height: 80px;
 }
+#control-bar i{
+    transition: all 0.2s ease;
+}
+#control-bar i:hover{
+    color:#fff;
+    transform: scale(1.2);
 
+}
 
 .control-bar__main-controls{
     flex-direction: column;
@@ -401,7 +411,7 @@ main {
 
     justify-content: space-between;
     width: 100%;
-    border: 1px solid red;
+
 }
 
 .control-bar__main-controls__top i{
@@ -424,17 +434,152 @@ width: 180%;
     margin: 10px;
 }
 
+
+
+.control-bar__other-controls, .control-bar__current-play-info{
+
+    flex-basis: 25%;
+}
+
+.ms--favourite{
+     margin-left: 20px;
+}
+
+.time-bar::before{
+    content:"";
+    display:table;
+    clear: both;
+    width:12px;
+    height:12px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: relative;
+    bottom:6px;
+    left:25%;
+    z-index: 2;
+}
+
+.time-bar-color{
+    position: relative;
+    left:-1px;
+    bottom:14px;
+    height: 4px;
+    width:26%;
+    background-color: #fff;
+}
+
+/*info-bar-mobile*/
+
+.info-bar-mobile{
+    height:60px;
+    width:100vw;
+    position: fixed;
+    bottom:80px;
+    color: #fff;
+    background-color: rgba(31,185,84,0.95);
+
+
+
+
+
+
+}
+.mini-cover{
+    width:60px;
+    object-fit: cover;
+
+}
+
+.info-bar-mobile-text{
+    flex-direction: column;
+    margin-left: 10px;
+
+}
+
+
+
+.info-bar-mobile__cover{
+    align-self: baseline;
+}
+
+.control-bar__current-play-info, .control-bar__other-controls{
+    display:none;
+}
+#control-bar{
+    justify-content: center;
+}
+.info-bar-mobile__love{
+    flex-basis: 20vw;
+    justify-content: space-evenly;
+    position: absolute;
+    right:20px;
+
+}
+.info-bar-mobile__love i{
+    margin-left: 20px;
+}
+
+.green-bar{
+    justify-content: space-around;
+}
+
+
+
 /*media queries - control bar*/
 @media screen and (min-width:768px) {
+    .control-bar__current-play-info, .control-bar__other-controls{
+        display: flex;
+    }
     .control-bar__main-controls{
-        flex-basis: 60%;
-
+        flex-basis: 50%;
+        margin: 0 auto;
     }
     .control-bar__main-controls__top{
     width: 60%;
     }
     .control-bar__main-controls__bottom{
     width: 100%;
+    }
+    .info-bar-mobile{
+        display: none;
+    }
+    #control-bar{
+        height: 90px;
+    }
+    .control-bar__current-play-info, .control-bar__other-controls{
+        padding:5px 20px;
+        max-width: 300px;
+    }
+
+    .control-bar__current-play-info{
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .control-bar__current-play-info__title{
+        font-size: 1.2em;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    .info-text{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .info-love{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 5px;
+        font-size: 18px;
+
+    }
+
+    .control-bar__other-controls{
+        justify-content: space-around;
+        font-size: 18px;
+    }
 
 }
 
@@ -455,6 +600,18 @@ width: 180%;
         width: calc(100vw - 55px);
     }
 
+    .mini-cover{
+        width:55px;
+    }
+
+    .info-bar-mobile{
+        height: 55px;
+    }
+    .control-bar__main-controls__top{
+        width:120%;
+    }
+
+
 }
 /* versione small (tablet) */
 @media screen and (min-width: 768px) {
@@ -468,6 +625,7 @@ width: 180%;
 
     main {
         width: calc(100vw - 230px);
+        height: calc(100vh - 90px);
     }
 }
 
