@@ -376,6 +376,7 @@ main {
     overflow-y: auto;
     padding-top: 70px;
 
+
 }
 
 nav.main__nav{
@@ -416,8 +417,66 @@ nav.main__nav{
     color: #fff;
 }
 
+.main__section:last-child{
+    padding-bottom: 100px;
+}
+
+/*sections*/
+.section-content{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: flex-start;
+
+}
+.main__section{
+
+    padding:20px 10px;
+
+
+}
+
+.main__section h2{
+    margin-bottom: 10px;
+    margin-left:14px;
+}
+/*cards*/
+.card__content{
+    padding:15px;
+    border-radius:20px;
+    min-height: 230px;
+
+    transition: 0.2s ease;
+}
+
+.card{
+    width: 140px;
+    border-radius:20px;
+    margin-right: 10px;
+}
+
+.card__content:hover{
+    background-color: rgba(0,0,0,0.2);
+    transform:scale(1.05);
+}
+
+
+
+.card img{
+    width:100%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.card h3{
+    font-size: 14px;
+}
+
+.card span{
+    font-size: 12px;
+}
+
 /*media queries - Main*/
-/* xss*/
+
 @media screen and (max-width:450px){
     .main__nav ul{
         flex-basis: 95%;
@@ -427,6 +486,8 @@ nav.main__nav{
         margin: 5px 10px
     }
 }
+
+
 @media screen and (min-width:670px) {
     nav.main__nav ul{
         flex-basis: 80%;
@@ -456,60 +517,69 @@ nav.main__nav{
     }
 }
 
-/*sections*/
-.section-content{
-    display: flex;
-    flex-wrap:wrap;
-    justify-content: flex-start;
+/* media queries cards */
+@media screen and (max-width:374px) {
+    .card{
+        width:110px;
+        margin-bottom:10px;
 
-}
-.main__section{
+    }
+    .card__content{
+        min-height: 120px;
+    }
+    .section-content{
+        justify-content: space-around;
+    }
+    .section-content span{
+        display: none;
+    }
+    .section-content span.author{
+        display: inline-block;
+    }
+    .section-content h3{
+        font-size: 12px;
+    }
+    .main__section h2{
+        text-align: center;
+        margin-left:0;
 
-    padding:20px 10px;
-
-
-}
-
-.main__section h2{
-    margin-bottom: 10px;
-}
-/*cards*/
-.card__content{
-    padding:15px;
-    border-radius:20px;
-    min-height: 230px;
-
-    transition: 0.2s ease;
-}
-
-.card{
-    width: 140px;
-
-
-    border-radius:20px;
-    margin-right: 10px;
+    }
 }
 
-.card__content:hover{
-    background-color: rgba(0,0,0,0.2);
-    transform:scale(1.05);
+@media screen and (min-width:375px) and (max-width:420px) {
+    .card{
+        width:140px;
+        margin-bottom:10px;
+    }
+    .section-content{
+        justify-content: space-around;
+    }
+    .main__section h2{
+        text-align: center;
+        margin-left:0;
+    }
+}
+@media screen and (min-width:421px) and (max-width:520px) {
+    .card{
+        width:160px;
+        margin-bottom:10px;
+    }
+    .section-content{
+        justify-content: space-around;
+    }
+    .main__section h2{
+        text-align: center;
+        margin-left:0;
+    }
+}
+@media screen and (min-width:769px) {
+    .card{
+        width:180px;
+        margin-bottom:10px;
+    }
 }
 
 
-
-.card img{
-    width:100%;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-
-.card h3{
-    font-size: 14px;
-}
-
-.card span{
-    font-size: 12px;
-}
 
 /* SEZ D - CONTROL BAR
 ======================= */
