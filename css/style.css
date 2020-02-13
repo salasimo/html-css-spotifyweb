@@ -12,6 +12,17 @@
     justify-content: center;
 }
 
+/* SCROLLBAR */
+.aside__menu-scroll::-webkit-scrollbar, main::-webkit-scrollbar {
+    /*chrome - safari*/
+  display: none;
+}
+*{ /*firefox*/
+    scrollbar-width: thin;
+    scrollbar-color: #282828 #121212;
+
+}
+
 /*=======================*/
 body {
     font-family: 'Roboto', sans-serif;
@@ -42,7 +53,7 @@ header {
     position: fixed;
     top: 0;
     right: 0;
-    background-color: rgba(18,18,18,0.95);
+    background-color: rgba(18,18,18,0.98);
     width: calc(100vw - 60px);
     height: 70px;
     z-index: 50;
@@ -94,7 +105,8 @@ header {
 
 .header__navigation i{
     font-size: 1.75em;
-    margin: 0 10px;
+    margin: 0 2px;
+    padding:10px;
 }
 
 @media screen and (min-width:768px) {
@@ -366,8 +378,8 @@ aside {
 main {
     display: flex;
     flex-direction: column;
-    /* background-color: #181818; */
-    background-color: #0e2047;
+    background-color: #181818;
+
     width: calc(100vw - 60px);
     height: calc(100vh - 70px);
     position: absolute;
@@ -378,6 +390,13 @@ main {
 
 
 }
+
+
+
+
+
+
+
 
 nav.main__nav{
     width:100%;
@@ -680,7 +699,7 @@ width: 180%;
     position: fixed;
     bottom:80px;
     color: #fff;
-    background-color: rgba(31,185,84,0.95);
+    background-color: rgba(31,185,84,0.98);
 
 
 
