@@ -340,12 +340,12 @@ aside {
         flex-direction: column;
         justify-content: flex-end;
         width: 100%;
-        position: relative;
-        top: 3px;
+        
     }
 
     .aside__current-play-cover img {
         width: 100%;
+        display:block;
     }
 
     .aside__current-play-cover__new-playlist a {
