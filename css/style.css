@@ -13,7 +13,8 @@
 }
 
 /* SCROLLBAR */
-.aside__menu-scroll::-webkit-scrollbar, main::-webkit-scrollbar {
+.aside__menu-scroll::-webkit-scrollbar,
+main::-webkit-scrollbar {
     /*chrome - safari*/
     display: none;
 }
@@ -26,7 +27,7 @@
 
 /*=======================*/
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 14px;
     color: #b3b3b3;
     letter-spacing: 1.2px;
@@ -76,7 +77,7 @@ header {
     border-radius: 20px;
 }
 
-.header__search-bar input[type=text] {
+.header__search-bar input[type="text"] {
     width: 150px;
     padding: 5px 30px;
     font-size: 16px;
@@ -109,7 +110,7 @@ header {
     padding: 10px;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
     .header__search-bar {
         display: block;
     }
@@ -129,7 +130,7 @@ header {
 }
 
 /*adattamento xxs < 420px*/
-@media screen and (max-width:419px) {
+@media screen and (max-width: 419px) {
     .header__navigation i {
         font-size: 1.5em;
     }
@@ -157,7 +158,10 @@ aside {
     height: calc(100vh - 90px);
 }
 
-.aside__menu-fixed--logo-large, .aside__menu-fixed--naviga, .aside__menu-fixed--radio, .aside__menu-fixed--home span {
+.aside__menu-fixed--logo-large,
+.aside__menu-fixed--naviga,
+.aside__menu-fixed--radio,
+.aside__menu-fixed--home span {
     display: none;
 }
 
@@ -165,7 +169,7 @@ aside {
     display: flex;
     flex-direction: column;
     align-items: center;
-    list-style: none:
+    list-style: none;
 }
 
 .aside__menu-fixed ul {
@@ -202,7 +206,7 @@ aside {
 }
 
 .aside__menu-fixed--home {
-    border-left: 2px solid #1AD860;
+    border-left: 2px solid #1ad860;
 }
 
 .aside__menu-fixed--home i {
@@ -224,8 +228,7 @@ aside {
 
 /* MEDIA QUERIES - ASIDE
 ======================== */
-@media screen and (max-width:419px) {
-
+@media screen and (max-width: 419px) {
     /*logo xxs*/
     .aside__menu-fixed--logo-small i {
         font-size: 26px;
@@ -254,7 +257,8 @@ aside {
         padding: 60px 40px;
     }
 
-    .aside__menu-fixed--cerca, .aside__menu-fixed--libreria {
+    .aside__menu-fixed--cerca,
+    .aside__menu-fixed--libreria {
         display: none;
     }
 
@@ -262,7 +266,12 @@ aside {
         display: flex;
     }
 
-    .aside__menu-fixed--naviga, .aside__menu-fixed--radio, .aside__menu-fixed--home, .aside__menu-fixed--naviga>a, .aside__menu-fixed--radio>a, .aside__menu-fixed--home>a {
+    .aside__menu-fixed--naviga,
+    .aside__menu-fixed--radio,
+    .aside__menu-fixed--home,
+    .aside__menu-fixed--naviga > a,
+    .aside__menu-fixed--radio > a,
+    .aside__menu-fixed--home > a {
         display: flex;
         align-items: center;
     }
@@ -341,12 +350,11 @@ aside {
         flex-direction: column;
         justify-content: flex-end;
         width: 100%;
-
     }
 
     .aside__current-play-cover img {
         width: 100%;
-        display:block;
+        display: block;
     }
 
     .aside__current-play-cover__new-playlist a {
@@ -463,37 +471,37 @@ nav.main__nav {
 }
 
 /*media queries - Main*/
-@media screen and (max-width:450px) {
+@media screen and (max-width: 450px) {
     .main__nav ul {
         flex-basis: 95%;
     }
 
     .main__nav ul li a {
         font-size: 0.9em;
-        margin: 5px 10px
+        margin: 5px 10px;
     }
 }
 
-@media screen and (min-width:670px) {
+@media screen and (min-width: 670px) {
     nav.main__nav ul {
         flex-basis: 80%;
     }
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
     nav.main__nav ul {
         flex-basis: 90%;
     }
 }
 
-@media screen and (min-width:950px) {
+@media screen and (min-width: 950px) {
     nav.main__nav ul {
         flex-basis: 60%;
         max-width: 1460px;
     }
 }
 
-@media screen and (min-width:1100px) {
+@media screen and (min-width: 1100px) {
     nav.main__nav ul {
         flex-basis: 100%;
         max-width: 1460px;
@@ -501,7 +509,7 @@ nav.main__nav {
 }
 
 /* media queries cards */
-@media screen and (max-width:374px) {
+@media screen and (max-width: 374px) {
     .card {
         width: 110px;
         margin-bottom: 10px;
@@ -533,7 +541,7 @@ nav.main__nav {
     }
 }
 
-@media screen and (min-width:375px) and (max-width:420px) {
+@media screen and (min-width: 375px) and (max-width: 420px) {
     .card {
         width: 140px;
         margin-bottom: 10px;
@@ -549,7 +557,7 @@ nav.main__nav {
     }
 }
 
-@media screen and (min-width:421px) and (max-width:520px) {
+@media screen and (min-width: 421px) and (max-width: 520px) {
     .card {
         width: 160px;
         margin-bottom: 10px;
@@ -565,7 +573,7 @@ nav.main__nav {
     }
 }
 
-@media screen and (min-width:769px) {
+@media screen and (min-width: 769px) {
     .card {
         width: 180px;
         margin-bottom: 10px;
@@ -627,7 +635,8 @@ nav.main__nav {
     margin: 10px;
 }
 
-.control-bar__other-controls, .control-bar__current-play-info {
+.control-bar__other-controls,
+.control-bar__current-play-info {
     flex-basis: 25%;
 }
 
@@ -682,7 +691,8 @@ nav.main__nav {
     align-self: baseline;
 }
 
-.control-bar__current-play-info, .control-bar__other-controls {
+.control-bar__current-play-info,
+.control-bar__other-controls {
     display: none;
 }
 
@@ -707,8 +717,9 @@ nav.main__nav {
 }
 
 /*media queries - control bar*/
-@media screen and (min-width:768px) {
-    .control-bar__current-play-info, .control-bar__other-controls {
+@media screen and (min-width: 768px) {
+    .control-bar__current-play-info,
+    .control-bar__other-controls {
         display: flex;
     }
 
@@ -733,7 +744,8 @@ nav.main__nav {
         height: 90px;
     }
 
-    .control-bar__current-play-info, .control-bar__other-controls {
+    .control-bar__current-play-info,
+    .control-bar__other-controls {
         padding: 5px 20px;
         max-width: 300px;
     }
@@ -771,8 +783,7 @@ nav.main__nav {
 /* MEDIA QUERIES - GENERALI
 =========================== */
 /* versione xxs < 420px*/
-@media screen and (max-width:419px) {
-
+@media screen and (max-width: 419px) {
     /*aside xxs*/
     aside {
         width: 55px;
@@ -817,6 +828,7 @@ nav.main__nav {
 }
 
 /* versione medium (desktop) */
-@media screen and (min-width: 992px) {}
+@media screen and (min-width: 992px) {
+}
 
 /* stassu */
